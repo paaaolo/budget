@@ -18,8 +18,8 @@
                         </select>
                     </div>
                     <div class="row mt-2">
-                        <button id="selectAll" style="padding: 5px 10px;" class="button">Select all</button>
-                        <button id="deselectAll" style="padding: 5px 10px;" class="button ml-1">Deselect all</button>
+                        <button id="selectAll" type="button" style="padding: 5px 10px;" class="button">Select all</button>
+                        <button id="deselectAll" type="button" style="padding: 5px 10px;" class="button ml-1">Deselect all</button>
                     </div>
                 </div>
                 <div class="box__section box__section--header">
@@ -86,16 +86,18 @@
             });
         }
 
-        document.querySelector('#selectAll').addEventListener('click', function (e) {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#selectAll').addEventListener('click', function (e) {
+                e.preventDefault();
 
-            selectAll();
-        });
+                selectAll();
+            });
 
-        document.querySelector('#deselectAll').addEventListener('click', function (e) {
-            e.preventDefault();
+            document.querySelector('#deselectAll').addEventListener('click', function (e) {
+                e.preventDefault();
 
-            deselectAll();
+                deselectAll();
+            });
         });
     </script>
 @endsection
